@@ -1,17 +1,191 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Nail Salon Talk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css"> -->
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+  <section id="before-sign-in">
+
+    <div class="container">
+    
+    </div>
+
+    <div id="popup">
+      <div class="popup-content">
+        <div class="popup-title">
+          <h3>NAIL SALON TALK </h3>
+        </div>
+        <!-- Sign up form goes here! -->
+        <form id="sign-up" class="form">
+          <!-- to group multiple inputs together in our form -->
+          <fieldset>
+            <label for="em" style="padding-top:13px"> &nbsp;Email Address  </label>
+            <input type="email" class="form-content" name="credentials[email]" id="em" required>
+            <div class="form-border"></div>
+
+
+            <label for="ps" style="padding-top:13px">&nbsp;Password&nbsp&nbsp  </label>
+            <input type="password" class="form-content" name="credentials[password]" id="ps" required>
+            <div class="form-border"></div>
+
+            <label for="psc" style="padding-top:13px"> Password Confirmation </label>
+            <input type="password" class="form-content" name="credentials[password_confirmation]" id="psc" required>
+            <div class="form-border"></div>
+
+
+            <button class="submit-btn">Sign-Up</button>
+          </fieldset>
+        </form>
+
+        <!-- Sign In -->
+
+        <form id="sign-in" class="form">
+          <fieldset>
+            <label for="email" style="padding-top:13px"> &nbsp;Email Address </label>
+            <input type="email" class="form-content" name="credentials[email]" id="email" required>
+            <div class="form-border"></div>
+
+
+            <label for="password" style="padding-top:13px">&nbsp;Password&nbsp&nbsp  </label>
+            <input type="password" class="form-content" name="credentials[password]" id="password" required>
+            <div class="form-border"></div>
+            <button class="submit-btn">Log-In</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- we only want this to be visible after you sign in -->
+  <!-- by default it should not be displayed -->
+  <section id="after-sign-in">
+
+
+    <div class="container">
+      <div class="menubox">
+        <h2>Welcome to Nail Salon Talks</h2>
+        <p>A nail art video series where we teach science and stuff. With your host, Lydia Cuen!</p>
+        <button class="submit-btn" id="createVidBtn">New Episode</button>
+        
+        
+          </form>
+          <hr>
+          
+          
+          <button class="submit-btn" id="videos-index" class="border" class="submit-btn">Get All Episodes</button>
+          <legend>List of All Episodes</legend>
+          <!-- <button id="videos-index">Get All Videos</button> -->
+          <hr>
+          
+          <form id="videos-show" class="border" action="">
+          <legend>Find an Episode</legend>
+            <input type="text" name="video[id]" placeholder="Episode Id">
+            <button class="submit-btn">Get One Episode</button>
+            <!-- <button>Get One Episode!</button> -->
+          </form>
+            <button class="submit-btn" class="border" id="updateVidBtn"> Add to Episode</button>
+
+            <form id="delete-video" class="border" action="">
+            <legend>Delete Episode</legend>
+              <input type="text" name="video[id]" class="form-content-main" placeholder="Enter Episode Id">
+              <!-- this button will submit the form, since it is inside a form it has teh submit by default, which mean s if the button is clicked the form is submitted -->
+              <button class="submit-btn">Delete Episode</button>
+              <!-- <button>Delete Episode</button> -->
+              </form>
+              <form id="change-password" class="border">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <label for="old">Old Password:</label>
+                  <input type="password" name="passwords[old]" id="old" placeholder="Enter Old Password" required />
+                  <label for="new">New Password:</label>
+                  <input type="password" name="passwords[new]" id="new" placeholder="Enter New Password" required />
+                  <!-- <button class="btn btn-primary">Change</button> -->
+                  <button class="submit-btn">Change Password</button>
+                </fieldset>
+              </form>
+              
+              <form id="sign-out" class="border">
+                <fieldset>
+                  <legend>Sign Out</legend>
+                  <!-- <button class="btn btn-primary">Sign Out</button> -->
+                  <button class="submit-btn">Sign Out</button>
+                </fieldset>
+              </form>
+         
+        </div>
+
+       
+        <div id="popup-create">
+          <div class="popup-content">
+      
+              <h2>CREATE AN EPISODE</h2>
+            </div>
+            <form id="videos-create" class="form" action="">
+              <label for="epName" style="padding-top:13px">Episode Name</label>
+              <input type="text" class="form-content" name="video[name]" id="epName" required>
+              <div class="form-border"></div>
+              <label for="epNumber" style="padding-top:13px">Episode Number</label>
+              <input type="text" class="form-content" name="video[episodeNumber]" id="epNumber" required>
+              <div class="form-border"></div>
+              <label for="epDescription" style="padding-top:13px">Episode Description</label>
+              <input type="text" class="form-content" name="video[description]" id="epDescription" required>
+              <div class="form-border"></div>
+              <button class="submit-btn">Create Episode</button>
+            </form>
+          </div>
+        </div>
+       
+        <div id="popup-update">
+          <div class="popup-content">
+            <div class="popup-title">
+              <h2>UPDATE AN EPISODE</h2>
+            </div>
+            <form id="videos-update" class="form" action="">
+              <label for="epName" style="padding-top:13px">Episode Name</label>
+              <input type="text" class="form-content" name="video[name]" id="epName" required>
+              <div class="form-border"></div>
+              <label for="epNumber" style="padding-top:13px">Episode Number</label>
+              <input type="text" class="form-content" name="video[episodeNumber]" id="epNumber" required>
+              <div class="form-border"></div>
+              <label for="epDescription" style="padding-top:13px">Episode Description</label>
+              <input type="text" class="form-content" name="video[description]" id="epDescription" required>
+              <div class="form-border"></div>
+              <label for="epId" style="padding-top:13px">Episode ID</label>
+              <input type="text" class="form-content" name="video[id]" id="epId" required>
+              <div class="form-border"></div>
+              <button class="submit-btn">Update Episode</button>
+            </form>
+          </div>
+        </div>
+      
+
+      <section>
+        <div class="container">
+          <div id="videos-display" class="row"></div>
+        </div>
+      </section>
+  </section>
+
+  <section>
+    <div id="error-message"></div>
+  </section>
+  </section>
+</body>
+
 </html>
