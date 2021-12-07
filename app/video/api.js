@@ -34,15 +34,6 @@ const create = function (videoData) {
 	})
 }
 
-const destroy = function (id) {
-	return $.ajax({
-		url: config.apiUrl + '/videos/' + id,
-		method: 'DELETE',
-		headers: {
-			Authorization: 'Bearer ' + store.user.token,
-		},
-	})
-}
 const update = function (id, formData) {
 	return $.ajax({
 		url: config.apiUrl + '/videos/' + id,
@@ -53,11 +44,21 @@ const update = function (id, formData) {
 		data: formData,
 	})
 }
+const destroy = function (id) {
+	return $.ajax({
+		url: config.apiUrl + '/videos/' + id,
+		method: 'DELETE',
+		headers: {
+			Authorization: 'Bearer ' + store.user.token,
+		},
+	})
+}
+
 
 module.exports = {
 	index,
 	show,
 	create,
-	destroy,
 	update,
+	destroy,
 }

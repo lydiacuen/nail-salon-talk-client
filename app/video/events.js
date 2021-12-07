@@ -4,13 +4,13 @@ const ui = require('./ui')
 
 const onIndexVideos = (event) => {
 	event.preventDefault()
-	console.log('all videos coming right up!')
+	console.log('showing all episodes!')
 	api.index().then(ui.onIndexVideosSuccess).catch(ui.onError)
 }
 
 const onShowVideo = (event) => {
 	event.preventDefault()
-	console.log('onShowVideo ran!')
+	console.log('onShowVideo worked!')
 	const data = getFormFields(event.target)
 	const videoId = data.video.id
 	console.log(data)
@@ -19,14 +19,14 @@ const onShowVideo = (event) => {
 
 const onCreateVideo = (event) => {
 	event.preventDefault()
-	console.log('Video was Created')
+	console.log('Video was created')
 	const data = getFormFields(event.target)
 	api.create(data).then(ui.onCreateVideoSuccess).catch(ui.onError)
 }
 
 const onUpdateVideo = (event) => {
 	event.preventDefault()
-	console.log('On Update video ran!')
+	console.log('On Update video worked!')
 	const data = getFormFields(event.target)
 	const id = data.video.id
 	api.update(id, data).then(ui.onUpdateVideoSuccess).catch(ui.onError)
@@ -34,7 +34,7 @@ const onUpdateVideo = (event) => {
 
 const onDestroyVideo = (event) => {
 	event.preventDefault()
-	console.log('On Delete Worked')
+	console.log('Video was deleted!')
 	const data = getFormFields(event.target)
 	const videoId = data.video.id
 	api.destroy(videoId).then(ui.onDeleteVideoSuccess).catch(ui.onError)

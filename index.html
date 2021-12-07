@@ -89,9 +89,10 @@
           
           
           <button class="submit-btn" id="videos-index" class="border" class="submit-btn">Get All Episodes</button>
-          <legend>List of All Episodes</legend>
-          <!-- <button id="videos-index">Get All Videos</button> -->
+        
           <hr>
+          
+          <button class="submit-btn" class="border" id="updateVidBtn"> Add to Episode</button>
           
           <form id="videos-show" class="border" action="">
           <legend>Find an Episode</legend>
@@ -99,7 +100,6 @@
             <button class="submit-btn">Get One Episode</button>
             <!-- <button>Get One Episode!</button> -->
           </form>
-            <button class="submit-btn" class="border" id="updateVidBtn"> Add to Episode</button>
 
             <form id="delete-video" class="border" action="">
             <legend>Delete Episode</legend>
@@ -123,7 +123,7 @@
               <form id="sign-out" class="border">
                 <fieldset>
                   <legend>Sign Out</legend>
-                  <!-- <button class="btn btn-primary">Sign Out</button> -->
+                 
                   <button class="submit-btn">Sign Out</button>
                 </fieldset>
               </form>
@@ -134,45 +134,46 @@
         <div id="popup-create">
           <div class="popup-content">
       
-              <h2>CREATE AN EPISODE</h2>
+              <h2>Create An Episode</h2>
             </div>
             <form id="videos-create" class="form" action="">
-              <label for="epName" style="padding-top:13px">Episode Name</label>
+              <label for="epName" style="padding-top:12px">Episode Name</label>
               <input type="text" class="form-content" name="video[name]" id="epName" required>
               <div class="form-border"></div>
-              <label for="epNumber" style="padding-top:13px">Episode Number</label>
+              <label for="epNumber" style="padding-top:12px">Episode Number</label>
               <input type="text" class="form-content" name="video[episodeNumber]" id="epNumber" required>
               <div class="form-border"></div>
-              <label for="epDescription" style="padding-top:13px">Episode Description</label>
+              <label for="epDescription" style="padding-top:12px">Episode Description</label>
               <input type="text" class="form-content" name="video[description]" id="epDescription" required>
               <div class="form-border"></div>
               <button class="submit-btn">Create Episode</button>
             </form>
           </div>
-        </div>
+      
        
         <div id="popup-update">
           <div class="popup-content">
-            <div class="popup-title">
-              <h2>UPDATE AN EPISODE</h2>
+         
+
+              <h2>Update An Episode</h2>
             </div>
             <form id="videos-update" class="form" action="">
-              <label for="epName" style="padding-top:13px">Episode Name</label>
+              <label for="epName" style="padding-top:12px">Episode Name</label>
               <input type="text" class="form-content" name="video[name]" id="epName" required>
               <div class="form-border"></div>
-              <label for="epNumber" style="padding-top:13px">Episode Number</label>
+              <label for="epNumber" style="padding-top:12px">Episode Number</label>
               <input type="text" class="form-content" name="video[episodeNumber]" id="epNumber" required>
               <div class="form-border"></div>
-              <label for="epDescription" style="padding-top:13px">Episode Description</label>
+              <label for="epDescription" style="padding-top:12px">Episode Description</label>
               <input type="text" class="form-content" name="video[description]" id="epDescription" required>
               <div class="form-border"></div>
-              <label for="epId" style="padding-top:13px">Episode ID</label>
+              <label for="epId" style="padding-top:12px">Episode ID</label>
               <input type="text" class="form-content" name="video[id]" id="epId" required>
               <div class="form-border"></div>
               <button class="submit-btn">Update Episode</button>
             </form>
           </div>
-        </div>
+       
       
 
       <section>

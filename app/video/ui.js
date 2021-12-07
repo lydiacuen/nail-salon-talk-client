@@ -100,10 +100,10 @@ const onError = (err) => {
 }
 module.exports = {
 	onCreateVideoSuccess,
+	onUpdateVideoSuccess,
 	onIndexVideosSuccess,
 	onShowVideoSuccess,
 	onDeleteVideoSuccess,
-	onUpdateVideoSuccess,
 	showUpdateVideo,
 	showCreateVideo,
 	onError,
